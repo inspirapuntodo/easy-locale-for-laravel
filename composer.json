@@ -1,0 +1,13 @@
+{
+    "name": "inspirapuntodo/easy-locale-for-laravel",
+    "description": "Easily manage your localization in your laravel app",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cesar Mendez"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
