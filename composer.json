@@ -26,6 +26,7 @@
         "laravel/pint": "^1.13"
     },
     "require-dev": {
-        "laravel/framework": "^10.31"
+        "laravel/framework": "^10.31",
+        "nunomaduro/larastan": "^2.6"
     }
 }
