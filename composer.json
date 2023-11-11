@@ -22,7 +22,8 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": "^8.1.0"
+        "php": "^8.1.0",
+        "laravel/pint": "^1.13"
     },
     "require-dev": {
         "laravel/framework": "^10.31"

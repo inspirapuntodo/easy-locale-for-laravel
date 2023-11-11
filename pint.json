@@ -1,0 +1,26 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "simplified_null_return": true,
+        "braces": true,
+        "new_with_braces": {
+            "anonymous_class": false,
+            "named_class": false
+        },
+        "comment_to_phpdoc": true,
+        "binary_operator_spaces": {
+            "default" : "single_space",
+            "operators": {
+                "=": "align_single_space_minimal",
+                "+=": "align_single_space_minimal",
+                "-=": "align_single_space_minimal"
+            }
+        },
+        "not_operator_with_successor_space": false,
+        "trailing_comma_in_multiline": true,
+        "yoda_style": true,
+        "array_syntax": {
+            "syntax": "short"
+        }
+    }
+}
