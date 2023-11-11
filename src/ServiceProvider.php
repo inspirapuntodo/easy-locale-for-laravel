@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace InspiraPuntoDo\EasyLocale;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use InspiraPuntoDo\EasyLocale\Commands\MakeLocaleCommand;
 
 /**
  * @see \InspiraPuntoDo\EasyLocaleForLaravelManager

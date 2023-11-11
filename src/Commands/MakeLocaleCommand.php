@@ -1,6 +1,6 @@
 <?php
 
-namespace InspiraPuntoDo\EasyLocale;
+namespace InspiraPuntoDo\EasyLocale\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
