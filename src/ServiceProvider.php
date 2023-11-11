@@ -30,7 +30,7 @@ class ServiceProvider extends BaseServiceProvider
     {
         return [
             Factory::class,
-            'easey-locale',
+            'easy-locale',
         ];
     }
 
