@@ -3,11 +3,28 @@
     "description": "Easily manage your localization in your laravel app",
     "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "InspiraPuntoDo\\EasyLocale\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
-            "name": "Cesar Mendez"
+            "name": "Cesar Mendez",
+            "email": "cesar@camv.dev"
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^10.31"
+    }
 }
