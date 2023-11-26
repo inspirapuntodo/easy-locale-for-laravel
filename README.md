@@ -7,7 +7,7 @@
 </p>
 
 ------
-# Easy for Laravel
+# Easy Locale for Laravel
  
 Easy Locale for Laravel is a package intended to make working with localization easier.
 
