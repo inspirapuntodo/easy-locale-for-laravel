@@ -37,7 +37,7 @@ final class MakeLocaleCommand extends Command implements PromptsForMissingInput
         foreach ($locales as $locale) {
             $creation_status = $this->createLocale($file_name, $directory_path, $locale);
 
-            $file_relative_path = $locale.'/'.$directory_path.'/'.$file_name.'.php';
+            $file_relative_path = implode('/', array_filter([$locale, $directory_path, $file_name])).'.php';
 
             match ($creation_status) {
                 FileCreationStatusEnum::ALREADY_EXISTS => $this->line("<options=bold;fg=yellow> {$file_relative_path} already exists, skiping...</>\n"),
@@ -53,7 +53,11 @@ final class MakeLocaleCommand extends Command implements PromptsForMissingInput
     {
         $base_path = base_path('lang/');
 
-        $locale_path = $base_path.$locale.'/'.$directory_path;
+        $locale_path = $base_path.$locale;
+
+        if (!empty($directory_path)) {
+            $locale_path .= '/'.$directory_path;
+        }
 
         $file_path = $locale_path.'/'.$file_name.'.php';
         if (!File::isDirectory(dirname($file_path))) {
