@@ -44,12 +44,12 @@ Next, add the following to `config/app.php` according to your locales, ex:
 ## Usage
  
 ```bash
-php artisan make:locale {locale_path}
+php artisan locale:make {locale_path}
 ```
 
 Ex:
 ```bash
-php artisan make:locale locations.cities
+php artisan locale:make locations.cities
 ```
 
 # Expected output:
