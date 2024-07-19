@@ -9,7 +9,7 @@ use InspiraPuntoDo\EasyLocale\Enums\FileCreationStatusEnum;
 
 final class MakeLocaleCommand extends Command implements PromptsForMissingInput
 {
-    protected $signature = 'make:locale {name}';
+    protected $signature = 'locale:make {name}';
 
     protected $description = 'Create localization files at the given path';
 
