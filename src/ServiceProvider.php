@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace InspiraPuntoDo\EasyLocale;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use InspiraPuntoDo\EasyLocale\Commands\DiffLocaleCommand;
 use InspiraPuntoDo\EasyLocale\Commands\MakeLocaleCommand;
 
 /**
@@ -42,6 +43,7 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->commands([
             MakeLocaleCommand::class,
+            DiffLocaleCommand::class,
         ]);
     }
 }
