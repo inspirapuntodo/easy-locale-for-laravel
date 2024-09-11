@@ -81,6 +81,11 @@ Translation for key: orders.status.pending_oayment MISSING on locale ES
 You have missing 1 translation\s
 ```
 
+## TODO
+
+- [ ] Find empty translation keys
+- [ ] Find diff on translation definitions, Ex: parameter :name set in spanish, but not in english
+- [ ] Find unused translations
 
 ## Contributing
  
