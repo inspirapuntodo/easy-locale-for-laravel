@@ -7,17 +7,21 @@ use Illuminate\Contracts\Console\PromptsForMissingInput;
 use Illuminate\Filesystem\Filesystem;
 use SplStack;
 
-final class DiffLocaleCommand extends Command implements PromptsForMissingInput {
-    protected $signature   = 'locale:diff';
+final class DiffLocaleCommand extends Command implements PromptsForMissingInput
+{
+    protected $signature = 'locale:diff';
+
     protected $description = 'Find differences between locales';
 
-    public function __construct(private Filesystem $filesystem) {
+    public function __construct(private Filesystem $filesystem)
+    {
         parent::__construct();
     }
 
-    public function handle() {
+    public function handle()
+    {
         $missing_keys_count = 0;
-        $locales    = array_keys(config('app.available_locales', []));
+        $locales            = array_keys(config('app.available_locales', []));
 
         $key_paths = [];
 
@@ -60,21 +64,24 @@ final class DiffLocaleCommand extends Command implements PromptsForMissingInput 
             foreach ($dot_keys as $dot_key) {
                 if (!trans()->hasForLocale($dot_key, $locale)) {
                     $missing_keys_count++;
-                    $this->line("Translation for key: <options=bold;fg=red>{$dot_key}</> MISSING on locale <options=bold>{$locale}</>\n");
+                    $this->line("Translation for key: <options=bold;fg=red>{$dot_key}</> MISSING on locale <options=bold>".strtoupper($locale)."</>\n");
                 }
             }
         }
 
         if ($missing_keys_count > 0) {
             $this->error("You have missing {$missing_keys_count} translation\s");
+
             return self::FAILURE;
         }
 
         $this->info('No differences found in your translation files');
+
         return self::SUCCESS;
     }
 
-    private function dotKeys(array $content) {
+    private function dotKeys(array $content)
+    {
         $dot_keys = [];
 
         $array_keys_stack = new SplStack;
