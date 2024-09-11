@@ -43,6 +43,7 @@ Next, add the following to `config/app.php` according to your locales, ex:
 
 ## Usage
  
+### Create transation files for each locale
 ```bash
 php artisan locale:make {locale_path}
 ```
@@ -52,14 +53,33 @@ Example:
 php artisan locale:make locations.cities
 ```
 
-# Expected output:
+#### Expected output:
+```bash
 Creating localization files for: locations/cities
 
- CREATED 🌎🌍🌏 es/locations/cities 🎉
+CREATED 🌎🌍🌏 es/locations/cities 🎉
 
- CREATED 🌎🌍🌏 en/locations/cities 🎉
+CREATED 🌎🌍🌏 en/locations/cities 🎉
 
 Hasta luego! 👋
+```
+
+### Find differences on existing translation files
+```bash
+php artisan locale:diff
+```
+
+#### Output on SUCCESS
+```
+No differences found in your translation files
+```
+
+#### Output on FAILURE
+```bash
+Translation for key: orders.status.pending_oayment MISSING on locale ES
+
+You have missing 1 translation\s
+```
 
 
 ## Contributing
